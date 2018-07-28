@@ -16,7 +16,6 @@ public class DateTimeConverter implements Converter {
     private static final String DATETIME  = "yyyy-MM-dd HH:mm:ss";
     private static final String TIMESTAMP = "yyyy-MM-dd HH:mm:ss.SSS";
 
-    @Override
     public Object convert(Class type, Object value) {
         return toDate(type, value);
     }

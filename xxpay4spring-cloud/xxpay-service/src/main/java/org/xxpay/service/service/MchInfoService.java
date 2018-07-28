@@ -1,8 +1,5 @@
 package org.xxpay.service.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.xxpay.dal.dao.mapper.MchInfoMapper;
 import org.xxpay.dal.dao.model.MchInfo;
 
 /**
@@ -12,14 +9,9 @@ import org.xxpay.dal.dao.model.MchInfo;
  * @version V1.0
  * @Copyright: www.xxpay.org
  */
-@Component
-public class MchInfoService {
 
-    @Autowired
-    private MchInfoMapper mchInfoMapper;
+public interface MchInfoService {
 
-    public MchInfo selectMchInfo(String mchId) {
-        return mchInfoMapper.selectByPrimaryKey(mchId);
-    }
+	MchInfo selectMchInfo(String mchId);
 
 }
